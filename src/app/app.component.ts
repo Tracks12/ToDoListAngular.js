@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'ToDoListAngular';
+
+  public title: string = 'ToDo List';
+  public version: string = '0.1';
+
 }

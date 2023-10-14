@@ -1,0 +1,26 @@
+<div class="edit-task-dialog">
+
+	<div mat-dialog-content>
+
+		<mat-form-field color="accent" class="edit-task-field">
+			<mat-label>Tâche</mat-label>
+			<input matInput type="text" [(ngModel)]="this.task.name" [formControl]="this.taskName">
+			<mat-error *ngIf="this.taskName.invalid">Vous devez entré un nom à la tâche</mat-error>
+		</mat-form-field>
+
+	</div>
+
+	<div mat-dialog-actions>
+
+		<button mat-button (click)="this.onCancelClick()">Retour</button>
+		<button
+			[disabled]="this.taskName.invalid"
+			mat-raised-button
+			color="accent"
+			(click)="this.onConfirmClick()"
+			cdkFocusInitial
+		>Modifier</button>
+
+	</div>
+
+</div>

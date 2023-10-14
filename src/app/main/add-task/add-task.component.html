@@ -1,0 +1,18 @@
+<mat-form-field class="form-input" color="accent">
+
+	<mat-label>Tâche</mat-label>
+	<input
+		matInput
+		type="text"
+		[placeholder]="this.placeholder"
+		[formControl]="this.taskName"
+		(click)="this.getRandomPlaceholder()"
+		(keyup.enter)="this.addTask()"
+	/>
+	<mat-error *ngIf="this.taskName.invalid">Vous devez entré un nom à la tâche</mat-error>
+
+	<button mat-icon-button matSuffix class="form-btn" (click)="this.addTask()">
+		<mat-icon class="form-btn-icon">send</mat-icon>
+	</button>
+
+</mat-form-field>

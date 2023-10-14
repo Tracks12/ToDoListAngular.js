@@ -1,0 +1,17 @@
+.main-frame {
+
+	left: 50%;
+	max-width: 95vw;
+	width: 60em;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.main-frame-actions {
+
+	text-align: center;
+
+}

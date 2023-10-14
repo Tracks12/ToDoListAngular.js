@@ -1,0 +1,39 @@
+<div class="task-item">
+
+	<div class="task-item-checkbox">
+		<mat-checkbox
+			color="accent"
+			[ngClass]="this.task.done ? 'task-item-done': ''"
+			[(ngModel)]="this.task.done"
+			(change)="this.checkedTask()"
+		>{{ this.task.name }}</mat-checkbox>
+	</div>
+
+	<div class="task-item-actions">
+
+		<button
+			mat-icon-button
+			matTooltip="Modifier"
+			matTooltipShowDelay="250"
+			matTooltipPosition="above"
+			(click)="this.editTask()"
+		>
+			<mat-icon>edit</mat-icon>
+		</button>
+
+		<button
+			mat-icon-button
+			color="warn"
+			matTooltip="Supprimer"
+			matTooltipShowDelay="250"
+			matTooltipPosition="above"
+			(click)="this.deleteTask()"
+		>
+			<mat-icon>delete</mat-icon>
+		</button>
+
+	</div>
+
+	<p class="task-item-date">{{ this.task.date | date : 'dd/MM/yyyy' }}</p>
+
+</div>

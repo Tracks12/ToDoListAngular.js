@@ -1,0 +1,3 @@
+<div cdkDropList class="task-list" (cdkDropListDropped)="this.drop($event)">
+	<app-task class="task-item" *ngFor="let task of this.tasks" [task]="task" cdkDrag></app-task>
+</div>

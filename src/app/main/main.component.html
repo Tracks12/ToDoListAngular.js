@@ -1,0 +1,27 @@
+<mat-card class="main-frame">
+
+	<mat-card-header>
+		<mat-card-title>Gestionaire des tâches</mat-card-title>
+    <mat-card-subtitle>Tâches finis : {{ this.dones }} / {{ this.total }}</mat-card-subtitle>
+  </mat-card-header>
+
+	<mat-card-content>
+		<app-list-task></app-list-task>
+	</mat-card-content>
+
+	<mat-divider></mat-divider>
+
+	<mat-card-actions class="main-frame-actions">
+    <app-add-task></app-add-task>
+  </mat-card-actions>
+
+	<mat-card-footer>
+		<mat-progress-bar
+			color="accent"
+			mode="buffer"
+			[value]="(this.dones / this.total) * 100"
+			[bufferValue]="(this.dones / this.total) * 100"
+		></mat-progress-bar>
+	</mat-card-footer>
+
+</mat-card>

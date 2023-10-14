@@ -1,11 +1,9 @@
-<header
-  class="py-2 text-center"
-  style="background-color: {{ bgColor }}"
->
-  <h1>{{ title }}</h1>
-  <h2>{{ subtitle }}</h2>
-  <p>{{ today }}</p>
+<mat-toolbar color="accent">
 
-	<p>one plus one is {{ 1 + 1 }}</p>
+	<button mat-icon-button (click)="this.onClick()" aria-label="icon-button with task icon">
+		<mat-icon>task</mat-icon>
+	</button>
 
-</header>
+	<h1>{{ this.appName }} {{ this.appVersion }}</h1>
+
+</mat-toolbar>
